@@ -7,7 +7,7 @@ We finetune the pre-trained **microsoft dialoGPT** dialogue systems on the movie
 
 
 ## Datasets
-### Movie dialogue corpus:
+### Movie Dialogue Corpus:
 https://www.kaggle.com/datasets/Cornell-University/movie-dialog-corpus
 
 The corpus contains a metadata-rich collection of fictional conversations extracted from raw movie scripts:
