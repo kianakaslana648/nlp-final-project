@@ -1,5 +1,4 @@
-# Chatbot for Movie Script
-
+# Chatbot in Movie Dialogue Style
 ## Basic Introduction
 * A chatbot you can chat with by sending messages whenever you want.  
 
