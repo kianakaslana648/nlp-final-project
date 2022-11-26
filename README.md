@@ -23,4 +23,4 @@ $\qquad$ DialoGPT-small; DialoGPT-medium; DialoGPT-large.
 
 
 ## Tutorial
-You can follow the tutorial ipynb for the fine-tuning process.
+You can follow the tutorial notebook for the fine-tuning process.
