@@ -17,7 +17,7 @@ The corpus contains a metadata-rich collection of fictional conversations extrac
 
 ## Pre-trained Models
 Seq2seq transformers from huggingface community:  
-$\qquad$ DialoGPT-small; DialoGPT-medium; DialoGPT-large.
+* DialoGPT-small; DialoGPT-medium; DialoGPT-large.
 
 
 
