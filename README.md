@@ -23,6 +23,9 @@ $\qquad$ DialoGPT-small; DialoGPT-medium; DialoGPT-large.
 
 ## Tutorial
 
+### Data Cleaning
+* You can follow the tutorial notebook **Movie_DialoGPT_train.ipynb** for the data-cleaning process. Currently we only make use of the subset dialogues of movies tagged with 'comedy'.
+
 ### Finetuning Process
 * You can follow the tutorial notebook **Movie_DialoGPT_train.ipynb** for the fine-tuning process.
 
