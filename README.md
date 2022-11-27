@@ -1,4 +1,4 @@
-# Chatbot in Movie Dialogue Style
+# Finetuned DialoGPT on Movie Dialogues
 ## Basic Introduction
 * A chatbot you can chat with by sending messages whenever you want.  
 
@@ -22,4 +22,10 @@ $\qquad$ DialoGPT-small; DialoGPT-medium; DialoGPT-large.
 
 
 ## Tutorial
-You can follow the tutorial notebook for the fine-tuning process.
+
+### Finetuning Process
+* You can follow the tutorial notebook **Movie_DialoGPT_train.ipynb** for the fine-tuning process.
+
+### Deploy on Google Voice
+* You need to first configure **client_secret.json** and **gmail_token.json** and add them to your work directory. Please refer to google voice documentation for details.
+* Then you can run the **googlevoice.ipynb** and send message to your google voice number for interaction.
