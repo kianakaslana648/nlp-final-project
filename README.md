@@ -4,7 +4,6 @@
 
 We finetune the pre-trained **microsoft dialoGPT** dialogue systems on the movie dialogue corpus. And finally deploy the chatbots using the API provided by **google voice**.
 
-
 ## Datasets
 ### Movie Dialogue Corpus:
 https://www.kaggle.com/datasets/Cornell-University/movie-dialog-corpus
@@ -19,8 +18,6 @@ The corpus contains a metadata-rich collection of fictional conversations extrac
 Seq2seq transformers from huggingface community:  
 * DialoGPT-small; DialoGPT-medium; DialoGPT-large.
 
-
-
 ## Tutorial
 
 ### Data Cleaning
@@ -32,6 +29,9 @@ Seq2seq transformers from huggingface community:
 ### Deploy on Google Voice
 * You need to first configure **client_secret.json** and **gmail_token.json** and add them to your work directory. Please refer to google voice documentation for details.
 * Then you can run the **googlevoice.ipynb** and send message to your google voice number for interaction.
+
+## Demos
+See screen recordings in the 'demos' folder.
 
 ## External Links:
 * Huggingface: https://huggingface.co/Kiana648/movie_dialogue_gpt2
