@@ -32,3 +32,6 @@ Seq2seq transformers from huggingface community:
 ### Deploy on Google Voice
 * You need to first configure **client_secret.json** and **gmail_token.json** and add them to your work directory. Please refer to google voice documentation for details.
 * Then you can run the **googlevoice.ipynb** and send message to your google voice number for interaction.
+
+## External Links:
+* Huggingface: https://huggingface.co/Kiana648/movie_dialogue_gpt2
