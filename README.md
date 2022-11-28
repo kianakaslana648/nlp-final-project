@@ -26,7 +26,7 @@ Seq2seq transformers from huggingface community:
 ### Finetuning Process
 * You can follow the tutorial notebook **Movie_DialoGPT_train.ipynb** for the fine-tuning process.
 
-### Deploy on Google Voice
+### Deploy using Google Voice
 * You need to first configure **client_secret.json** and **gmail_token.json** and add them to your work directory. Please refer to google voice documentation for details.
 * Then you can run the **googlevoice.ipynb** and send message to your google voice number for interaction.
 
