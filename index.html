@@ -35,10 +35,7 @@
     <h4>
       Introduction
     </h4>
-    <p>
-      <ul><li>A chatbot you can chat with by sending messages whenever you want.</li></ul>
-      We finetune the pre-trained microsoft dialoGPT dialogue systems on the movie dialogue corpus. And finally deploy the chatbots using the API provided by google voice.
-    </p>
+
     <br>
     <hr>
 
@@ -48,151 +45,155 @@
 
     <br>
     <hr style=" border-top: 8px solid #bbb; border-radius: 5px;">
-    <h3 style="text-align: center">Technical Parts</h3>
-    <h4>
-      Pre-trained Model
-    </h4>
-    <br>
-    <p><strong>DialoGPT</strong> from <strong>microsoft</strong></p>
-    <p> Model link from <strong>huggingface</strong>: <a href="https://huggingface.co/microsoft/DialoGPT-medium">microsoft/DialoGPT</a></p>
-    <ul>
-      <li>Establishes a foundation for building versatile open-domain chatbots that can deliver natural conversational responses across various conversational topics.</li>
-      <li>Formulated as an autoregressive (AR) language model, uses a multi-layer transformer as model architecture, and draws on 147M multi-turn dialogues extracted from Reddit discussion threads.</li>
-      <li>Responses approach human-level response quality in a single-turn Turing test.</li>
-    </ul>
-    <br>
-    <hr>
-    
-    <h4>
-      Dataset
-    </h4>
-    <br>
-    <p><strong>Movie Dialogue Corpus</strong></p>
-    <p>
-      The corpus contains a metadata-rich collection of fictional conversations extracted from raw movie scripts:
-    </p>
-    <p>
-      <a href="https://www.kaggle.com/datasets/Cornell-University/movie-dialog-corpus">movie-dialog-corpus-kaggle-link</a>
-    </p>
-    <ul>
-      <li>
-        220,579 conversational exchanges between 10,292 pairs of movie characters
-      </li>
-      <li>
-        involves 9,035 characters from 617 movies
-      </li>
-      <li>
-        in total 304,713 utterances
-      </li>
-    </ul>
-    <br>
-    <hr>
+  
+    <details>
+      <summary><h3 style="text-align: center">Technical Parts</h3></summary>
+        <h4>
+          Pre-trained Model
+        </h4>
+        <br>
+        <p><strong>DialoGPT</strong> from <strong>microsoft</strong></p>
+        <p> Model link from <strong>huggingface</strong>: <a href="https://huggingface.co/microsoft/DialoGPT-medium">microsoft/DialoGPT</a></p>
+        <ul>
+          <li>Establishes a foundation for building versatile open-domain chatbots that can deliver natural conversational responses across various conversational topics.</li>
+          <li>Formulated as an autoregressive (AR) language model, uses a multi-layer transformer as model architecture, and draws on 147M multi-turn dialogues extracted from Reddit discussion threads.</li>
+          <li>Responses approach human-level response quality in a single-turn Turing test.</li>
+        </ul>
+        <br>
+        <hr>
 
-    <h4>
-      Data Cleaning
-    </h4>
-    <br>
+        <h4>
+          Dataset
+        </h4>
+        <br>
+        <p><strong>Movie Dialogue Corpus</strong></p>
+        <p>
+          The corpus contains a metadata-rich collection of fictional conversations extracted from raw movie scripts:
+        </p>
+        <p>
+          <a href="https://www.kaggle.com/datasets/Cornell-University/movie-dialog-corpus">movie-dialog-corpus-kaggle-link</a>
+        </p>
+        <ul>
+          <li>
+            220,579 conversational exchanges between 10,292 pairs of movie characters
+          </li>
+          <li>
+            involves 9,035 characters from 617 movies
+          </li>
+          <li>
+            in total 304,713 utterances
+          </li>
+        </ul>
+        <br>
+        <hr>
 
-    <ul>
-      <li>
-        Join the csv files and get all the conversations in movies tagged by 'comedy'.
-      </li>
-      <li>
-        Filter out meanless sentences such as 'Yes.', 'No.', 'I don't know', 'I'm sorry',
-        which take a large part of original dataset and can lead to unwanted fintuning results.
-      </li>
-      <li>
-        Filter out all sentences with length under 10, which are low-quality conversations.
-      </li>
-    </ul>
-    <br>
-    <hr>
+        <h4>
+          Data Cleaning
+        </h4>
+        <br>
 
-    <h4>
-      Finetuning
-    </h4>
-    <br>
-    <p>
-      <strong>Hardware Support for Training:</strong>
-    </p>
-    <ul>
-      <li>
-        Colab Pro+ & extra 300 compute units($50 per month + extra $30)(500+300 compute units)
-      </li>
-      <li>
-        Google One ($2 per month)(100 GB storage)
-      </li>
-      <li>
-        Intel i7-10750H (RAM 16GB)
-      </li>
-    </ul>
-    <br>
-    <p>
-      <strong>Finetuning Time:</strong>(Epochs:2 Batch_size:4)
-    </p>
-    <ul>
-      <li>
-        DialoGPT-small: Around 35min
-      </li>
-      <li>
-        DialoGPT-medium: Around 1h 20min
-      </li>
-      <li>
-        DialoGPT-large: Around 2h 15min
-      </li>
-    </ul>
-    <br>
-    <p>
-      <strong>Loss Visualization:</strong>(Screenshots of Tensorboard)
-    </p>
-    <!-- IMAGE: body length comparison -->
-    <div class="row py-5">
+        <ul>
+          <li>
+            Join the csv files and get all the conversations in movies tagged by 'comedy'.
+          </li>
+          <li>
+            Filter out meanless sentences such as 'Yes.', 'No.', 'I don't know', 'I'm sorry',
+            which take a large part of original dataset and can lead to unwanted fintuning results.
+          </li>
+          <li>
+            Filter out all sentences with length under 10, which are low-quality conversations.
+          </li>
+        </ul>
+        <br>
+        <hr>
 
-      <div class="col-md-12">
-        <div class="card p-0" style="border: none">
-          <img src="imgs/loss-medium.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p style="font-weight: lighter; text-align: center;"><b>Screenshot:</b> Loss Record of Medium-Size Model Finetuning</p>
+        <h4>
+          Finetuning
+        </h4>
+        <br>
+        <p>
+          <strong>Hardware Support for Training:</strong>
+        </p>
+        <ul>
+          <li>
+            Colab Pro+ & extra 300 compute units($50 per month + extra $30)(500+300 compute units)
+          </li>
+          <li>
+            Google One ($2 per month)(100 GB storage)
+          </li>
+          <li>
+            Intel i7-10750H (RAM 16GB)
+          </li>
+        </ul>
+        <br>
+        <p>
+          <strong>Finetuning Time:</strong>(Epochs:2 Batch_size:4)
+        </p>
+        <ul>
+          <li>
+            DialoGPT-small: Around 35min
+          </li>
+          <li>
+            DialoGPT-medium: Around 1h 20min
+          </li>
+          <li>
+            DialoGPT-large: Around 2h 15min
+          </li>
+        </ul>
+        <br>
+        <p>
+          <strong>Loss Visualization:</strong>(Screenshots of Tensorboard)
+        </p>
+        <!-- IMAGE: body length comparison -->
+        <div class="row py-5">
 
+          <div class="col-md-12">
+            <div class="card p-0" style="border: none">
+              <img src="imgs/loss-medium.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p style="font-weight: lighter; text-align: center;"><b>Screenshot:</b> Loss Record of Medium-Size Model Finetuning</p>
+
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- IMAGE END -->
-    <hr>
-    <h4>
-      Future Work
-    </h4>
-    <br>
-    <ul>
-      <li>
-        Refer to related papers to find how to deal with unwanted adversarial replies.
-      </li>
-      <li>
-        Use state-of-the-art planning strategies rather than simply shuffle the training dataset.
-      </li>
-      <li>
-        Finetune on larger datasets with higher quality(Balanced and explicitly in some certain utterance style)
-      </li>
-    </ul>
-    <br>
-    <hr>
-    <h4>
-      Links
-    </h4>
-    <br>
-    <ul>
-      <li>
-        <a href="https://github.com/kianakaslana648/nlp-final-project">Github Repo</a> for tutorial of data cleaning
-    finetuning and deploying.
-      </li>
-      <li>
-        <a href="https://huggingface.co/Kiana648/movie_dialogue_gpt2">Huggingface Page</a> for the finetuned model(in medium size).
-      </li>
-    </ul>
-  </div> <!-- container -->
+        <!-- IMAGE END -->
+        <hr>
+        <h4>
+          Future Work
+        </h4>
+        <br>
+        <ul>
+          <li>
+            Refer to related papers to find how to deal with unwanted adversarial replies.
+          </li>
+          <li>
+            Use state-of-the-art planning strategies rather than simply shuffle the training dataset.
+          </li>
+          <li>
+            Finetune on larger datasets with higher quality(Balanced and explicitly in some certain utterance style)
+          </li>
+        </ul>
+        <br>
+        <hr>
+        <h4>
+          Links
+        </h4>
+        <br>
+        <ul>
+          <li>
+            <a href="https://github.com/kianakaslana648/nlp-final-project">Github Repo</a> for tutorial of data cleaning
+        finetuning and deploying.
+          </li>
+          <li>
+            <a href="https://huggingface.co/Kiana648/movie_dialogue_gpt2">Huggingface Page</a> for the finetuned model(in medium size).
+          </li>
+        </ul>
+    </details>
 
-  </p>
+
+    
+  </div> <!-- container -->
   <footer class="blog-footer">
     <p>
       <a href="#">Back to top</a>
