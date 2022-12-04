@@ -1,4 +1,5 @@
 # Finetuned DialoGPT on Movie Dialogues
+Team Member: Jieqian Liu(jl2750), Jieyi Sun(js4958), Zidong Xu(zx92), Minglei Cai(mc2582)
 Report Website: https://kianakaslana648.github.io/nlp-final-project/#
 
 ## Basic Introduction
