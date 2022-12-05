@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>A Finetuned Open-Domain Chatbot for Amusement</title>
+  <title>An Interesting & Dramatic Chatbot</title>
 
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -29,35 +29,188 @@
   <!-- Navbar -->
   <div class="container" style="max-width: 800px">
 
-    <h2 style="text-align: center">Finetuned DialoGPT on Movie Dialogues</h2>
-
+    <h2 style='text-align: center; font-family: "Lucida Handwriting", "Brush Script MT", cursive;'>An Interesting & Dramatic Chatbot</h2>
+    <p style='font-size: 20px; text-align: right; font-family: "Times New Roman", Times, serif;'>
+      Final Project of ANLY580 <br>
+      Natural Language Processing <br>
+      at Georgetown University</p>
+    
     <hr style=" border-top: 8px solid #bbb; border-radius: 5px;">
-    <h4>
-      Introduction
+    <h4 style='font-family: "Times New Roman", Times, serif;'>
+      <strong>An Introduction to Chatbots</strong>
     </h4>
     <div class="row py-5">
     
               <div class="col-md-12">
                 <div class="card p-0" style="border: none">
-                  <img src="imgs/introduction.png" class="card-img-top" alt="...">
+                  <img src="imgs/introduction.png" style="margin:auto;" alt="..." width="500">
                   <div class="card-body">
                     <p style="font-weight: lighter; text-align: center;">How Chatbot Works</p>
     
                   </div>
                 </div>
               </div>
-            </div>
-    <p>Chatbot has been widely used in recent years inside lots of applications. For different usage, chatbot will give users various answers even under the same question or words. Chatbot will compose reply to users depending on their input, analyzing user’s request and identifying intent and entities inside. Some chatbots are rigid, only answering questions containing specific keywords. But there are also some chatbots answering just like chatting or having a conversation with users.</p> 
-    <p>We finetune the pre-trained microsoft dialoGPT2 dialogue systems on the movie dialogue corpus because dialogues in movie are more dramatic and emotional, different from daily dialogues. And finally deploy the chatbots using the API provided by google voice. The answer will give users a sense of surprising and interesting, let’s see a demo first. 
-</p>
+    </div>
+    <p>
+      <strong>Chatbots</strong> 
+      generally represent for the software applications which can 
+      carry out live conversations with users' utterances in the form of text or audio. 
+      While a lot of research has been done on chatbots for the theories and engineering techniques, 
+      a number of chatbot applications have been also developed in different settings.
+      The chatbots could be divided into different categories according to the usage and principles behind,
+      among which some popular ones are:
+    </p>
+    <ul>
+      <li><strong>Customer Service Chatbots:</strong> Carry out Q&As and provide service options
+      for the customers. Two typical examples are customer service chatbots of e-commerce companies,
+      such as <strong>Amazon</strong> and <strong>Ebay</strong>.</li>
+      <li><strong>Task Oriented Chatbots:</strong> Answer questions and have the ability to
+        complete specific tasks, such as scheduling appointments and making calls. 
+        Two typical examples are <strong>Siri</strong> from <strong>Apple</strong> and 
+        <strong>Cortana</strong> from <strong>Microsoft</strong>.</li>
+      <li><strong>Open Domain Chatbots:</strong> Chat with users in turns in an open domain, not 
+      restricted to specific tasks, sometimes within certain topics. </li>
+    </ul>
+    <br>
+    <hr>
+    <h4 style='font-family: "Times New Roman", Times, serif;'>
+      <strong>Project Goals</strong>
+    </h4>
+    <br>
+    <p>
+      For our project, we place our interests and efforts on the open-domain chatbots.
+      We expect to build a open-domain chatbot with dramatic responses,
+      which has the ability of 'chatting' with the user in an interesting and interactive way.
 
+    </p>
+    <p>
+      Our basic idea is first load the open-source pre-trained models of <strong>DialoGPT2</strong>,
+      which are from microsoft and trained primarily on twits and reddits.
+      Then we finetune the model on the movie dialogue corpus, 
+      in the assumption that conversations in movies tend to be more dramatic and 
+      emotional, different from common conversations, specifically twits and reddits. 
+      We finally deploy the chatbots using google voice API. More technical details are provided in the
+      technical parts.
+    </p>
+    <p>
+      Anyway, we simply want to give the user a surprise, a sense of happiness, 
+      and a relief temporarily from the heavy everyday work and studies.
+    </p>
     <br>
     <hr>
 
-    <h4>
-      Demos & Screenshots
+    <h4 style='font-family: "Times New Roman", Times, serif;'>
+      <strong>Demo</strong>
     </h4>
+    <p>Let's see a demo first.</p>
+    <div class="row py-5">
+    
+      <div class="col-md-12">
+        <div class="card p-0" style="border: none">
+          <video width="250" style="margin:auto;" controls >
+            <source src="demos/demo1.mp4"  type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="card-body">
+            <p style="font-weight: lighter; text-align: center;">An Interesting Demo</p>
 
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>Well, while this is our chatbot of the 'first generation', it chats with us as our SweetHeart!</p>
+
+    <br>
+    <hr>
+    <h4 style='font-family: "Times New Roman", Times, serif;'>
+      <strong>More Interactions</strong>
+    </h4>
+    <br>
+    <p>After we improve our data-cleaning & finetuning process and have
+      more trials for the hyper-parameters, our SweetHeart 
+      becomes more interesting and interactive.
+      And we have more interesting interactions with our SweetHeart:</p>
+
+    <table style="margin:auto;">
+      <tr>
+        <td>
+          <div class="row py-5">
+            <div class="col-md-12">
+              <div class="card p-0" style="border: none">
+                <img src="imgs/Screenshot1.jpg" width='200px' style="margin:auto;" alt="...">
+              </div>
+            </div>
+          </div>
+        </td>
+
+        <td>
+          <div class="row py-5">
+            <div class="col-md-12">
+              <div class="card p-0" style="border: none">
+                <img src="imgs/Screenshot2.jpg" width='200px' style="margin:auto;" alt="...">
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="row py-5">
+            <div class="col-md-12">
+              <div class="card p-0" style="border: none">
+                <img src="imgs/Screenshot3.jpg" width='200px' style="margin:auto;" alt="..." >
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="row py-5">
+            <div class="col-md-12">
+              <div class="card p-0" style="border: none">
+                <img src="imgs/Screenshot4.jpg" width='200px' style="margin:auto;" alt="..." >
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <div class="card-body">
+      <p style="font-weight: lighter; text-align: center;">Screenshots of More Interesting Interactions</p>
+
+    </div>
+    <br>
+    <p>
+      We interact with our SweetHeart using common sentences, philosophical questions, quotes of Darks Souls & 
+      Elden Ring, poems by Load Byron. And in reply our SweetHeart presents us with some surprises!
+    </p>
+    <p>
+      While original DialoGPT tend to give longer replies as illustrations to the question 
+      'What's meaning of Life?', our chatbot tend to reply in a short and smart way, which 
+      is expected in movie conversations.
+    </p>
+    <br>
+    <hr>
+    <h4 style='font-family: "Times New Roman", Times, serif;'>
+      <strong>Conclusions</strong>
+    </h4>
+    <br>
+    <p>
+      While this is simply the content of our NLP final project and our SweetHeart interacts with us
+      as what we've expected. More complex structures and more techniques can be applied to our chatbot
+      in the future.
+    </p>
+    <p>
+      There is a famous and instructive quote from <strong>Dr. Seuss</strong>:
+    </p>
+    <p style="font-family: cursive;">
+       The more that you read, the more things you will know.<br>
+        The more that you learn, the more places you’ll go.
+    </p>
+    <p>
+      While our SweetHeart has learned from the movie conversations, we ourselves need to keep learning 
+      from more papers and applications, in the hope to build more interesting and elegant models 
+      in the future. 
+    </p>
     <br>
     <hr style=" border-top: 8px solid #bbb; border-radius: 5px;">
   
