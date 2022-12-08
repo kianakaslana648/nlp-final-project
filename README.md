@@ -15,6 +15,9 @@ The Movie Dialogue Corpus contains a metadata-rich collection of fictional conve
 
 ## Pre-trained Models
 DialoGPT from microsoft
+
+https://huggingface.co/microsoft/DialoGPT-medium?text=Hey+my+name+is+Mariama%21+How+are+you%3F
+
 * DialoGPT-small; DialoGPT-medium; DialoGPT-large.
 
 ## Tutorial
