@@ -151,7 +151,25 @@
                 In experiments of interacting with this chatbot, we found that it tends to give very short response. 
                 Since the business goal of this chatbot is to help users to pass the time away and gives users entertainment, 
                 such short conversations are not wanted by users. Therefore, we filtered out all sentences with length under 10.
-             
+    
+    
+    <br>
+    <hr>
+    <h4 style='font-family: "Times New Roman", Times, serif;'>
+      <strong>Deploy</strong>
+    </h4>
+            <br>
+                We used Google Voice API to receive messages, autosave messages to gmail. 
+                Then processed unread messages every 5 seconds, using our models. 
+                Finally sent processed messages through our virtual number (+1 2028884948). 
+                All messages were processed in different sessions which are classified by sender numbers.
+
+            <br>
+                Since there were no extra machines nor rent any servers, 
+                we deployed our models just on Google Colab. 
+                Considering the price of google colab, it is not 24-hour deployed, only running when we want to make interactions with our chatbot.
+
+                      
             
         <br>
         <hr>
@@ -187,24 +205,6 @@
                 We waited around 35 minutes for DialoGPT-small (0.5 GB) to respond, 
                 80 minutes for DialoGPT-medium (1.4 GB) to respond, 135 minutes for DialoGPT-large (2.9 GB) to respond.
             
-           <br>
-    <hr>
-    <h4 style='font-family: "Times New Roman", Times, serif;'>
-      <strong>Data Cleaning</strong>
-    </h4>
-            <br>
-                We used Google Voice API to receive messages, autosave messages to gmail. 
-                Then processed unread messages every 5 seconds, using our models. 
-                Finally sent processed messages through our virtual number (+1 2028884948). 
-                All messages were processed in different sessions which are classified by sender numbers.
-
-            <br>
-                Since there were no extra machines nor rent any servers, 
-                we deployed our models just on Google Colab. 
-                Considering the price of google colab, it is not 24-hour deployed, only running when we want to make interactions with our chatbot.
-
-             
-           
             <br>
             <p>
               <strong>Loss Visualization:</strong>(Screenshots of Tensorboard)
