@@ -37,7 +37,7 @@
       at Georgetown University</p>
     
     <hr style=" border-top: 8px solid #bbb; border-radius: 5px;">
-    Author: 
+    Authors: Minglei Cai, Jieqian Liu, Jieyi Sun, Zidong Xu
     <hr style=" border-top: 8px solid #bbb; border-radius: 5px;">
    
     <h4 style='font-family: "Times New Roman", Times, serif;'>
@@ -110,9 +110,13 @@
             <p><strong>DialoGPT</strong> from <strong>microsoft</strong></p>
             <p> Model link from <strong>huggingface</strong>: <a href="https://huggingface.co/microsoft/DialoGPT-medium">microsoft/DialoGPT</a></p>
             <ul>
-              <li>Establishes a foundation for building versatile open-domain chatbots that can deliver natural conversational responses across various conversational topics.</li>
-              <li>Formulated as an autoregressive (AR) language model, uses a multi-layer transformer as model architecture, and draws on 147M multi-turn dialogues extracted from Reddit discussion threads.</li>
-              <li>Responses approach human-level response quality in a single-turn Turing test.</li>
+            <p>
+             The DialoGPT was released by Microsoft and trained with 147M multi-turn dialogues extracted from Reddit discussion threads. It has strong flexibility and robustness. As an autoregressive (AR) language model which uses a multi-layer transformer as its model architecture, it establishes a foundation for building versatile open-domain chatbots which can deliver engaging and natural conversational responses across various topics, tasks, and information requests, without resorting to heavy hand-crafting.
+            </p>
+              
+            <p>
+              According to the human evaluation results, the response generated from DialoGPT is comparable to human response quality under a single-turn conversation Turing test.
+            </P>
             </ul>
     <br>
     <hr>
@@ -143,35 +147,37 @@
     <h4 style='font-family: "Times New Roman", Times, serif;'>
       <strong>Data Cleaning</strong>
     </h4>
-            <br>
+            <p>
                 First, we joined the csv files and got all the conversations in movies tagged by ‘comedy’.
-            <br>
+            </P>
+            <p>
                 Since we trained the models using movie dialogues data, 
                 there are too many repeated sentences like ‘Yes’, ‘No’, ‘I don’t know’, ‘I’m sorry’ in our training data sets. 
                 To avoid the situation the chatbot respond too many such words to users instead of humorous responses, 
                 we removed these superfluous words from our training dataset. 
-            <br>
+            </P>
+            <p>
                 In experiments of interacting with this chatbot, we found that it tends to give very short response. 
                 Since the business goal of this chatbot is to help users to pass the time away and gives users entertainment, 
                 such short conversations are not wanted by users. Therefore, we filtered out all sentences with length under 10.
-    
+            </P>
     
     <br>
     <hr>
     <h4 style='font-family: "Times New Roman", Times, serif;'>
       <strong>Deploy</strong>
     </h4>
-            <br>
+            <p>
                 We used Google Voice API to receive messages, autosave messages to gmail. 
                 Then processed unread messages every 5 seconds, using our models. 
                 Finally sent processed messages through our virtual number (+1 2028884948). 
                 All messages were processed in different sessions which are classified by sender numbers.
-
-            <br>
+            </P>
+            <p>
                 Since there were no extra machines nor rent any servers, 
                 we deployed our models just on Google Colab. 
                 Considering the price of google colab, it is not 24-hour deployed, only running when we want to make interactions with our chatbot.
-
+            </P>
                       
             
         <br>
