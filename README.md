@@ -24,11 +24,9 @@ DialoGPT from microsoft
 https://huggingface.co/microsoft/DialoGPT-medium?text=Hey+my+name+is+Mariama%21+How+are+you%3F
 
 * DialoGPT-small; DialoGPT-medium; DialoGPT-large.
-<br /> 
 
 
 ## Tutorial
-
 ### Data Cleaning
 * You can follow the tutorial notebook **Movie_DialoGPT_train.ipynb** for the data-cleaning process. Currently we only make use of the subset dialogues of movies tagged with 'comedy'.
 
@@ -38,7 +36,6 @@ https://huggingface.co/microsoft/DialoGPT-medium?text=Hey+my+name+is+Mariama%21+
 ### Deploy using Google Voice
 * You need to first configure **client_secret.json** and **gmail_token.json** and add them to your work directory. Please refer to google voice documentation for details.
 * Then you can run the **googlevoice.ipynb** and send message to your google voice number for interaction.
-<br /> 
 
 
 ## Demos
