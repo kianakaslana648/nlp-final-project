@@ -206,7 +206,7 @@
             <ul>
               <li>
                 To adjust the chatbot precisely so as to bring to the highest level of performance and effective, 
-                the hardware support we chose for training is Colab Pro+ with 800 compute units which cost us $530 per month. 
+                the hardware support we chose for training is Colab Pro+ with 800 compute units which cost us $80 per month. 
               </li>
               <li>
                 To ensure that we have enough cloud storage, we used Google One with 100 GB storage which cost us $2 per month.  
@@ -231,20 +231,71 @@
             <p>
               <strong>Loss Visualization:</strong>(Screenshots of Tensorboard)
             </p>
-            <!-- IMAGE: body length comparison -->
-            <div class="row py-5">
-
-              <div class="col-md-12">
-                <div class="card p-0" style="border: none">
-                  <img src="imgs/loss-medium.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p style="font-weight: lighter; text-align: center;"><b>Screenshot:</b> Loss Record of Medium-Size Model Finetuning</p>
-
+            <table>
+              <tr>
+                <td>
+                  <!-- IMAGE: body length comparison -->
+                  <div class="row py-5">
+          
+                    <div class="col-md-12">
+                      <div class="card p-0" style="border: none">
+                        <img src="imgs/loss-small.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p style="font-weight: lighter; text-align: center;">Loss Record of Small-Size Model Finetuning</p>
+          
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                  <!-- IMAGE END -->
+                </td>
+                <td>
+                  <!-- IMAGE: body length comparison -->
+                  <div class="row py-5">
+          
+                    <div class="col-md-12">
+                      <div class="card p-0" style="border: none">
+                        <img src="imgs/loss-large.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p style="font-weight: lighter; text-align: center;">Loss Record of Large-Size Model Finetuning</p>
+          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- IMAGE END -->
+                </td>
+              </tr>                  
+            </table>
+            <!-- IMAGE: body length comparison -->
+              <div width="350px" style="margin:auto">
+                <img src="imgs/loss-medium.jpg" alt="..." >
+                  <div class="card-body">
+                    <p style="font-weight: lighter; text-align: center;">Loss Record of Medium-Size Model Finetuning</p>
+                  </div>
+
               </div>
-            </div>
-            <!-- IMAGE END -->
+                  
+              
+            <!-- IMAGE END -->      
+            <ul>
+              <li>
+                We use the training loss as part of our standards for the hyper-parameter selection.
+              </li>
+              <li>
+                We have trials of the small-size models to find a roughly appropriate range
+                for the learning rate. We also test the trick of clipping gradient norms in this
+                setting. According to the loss, it's better to clip the gradients.
+              </li>
+              <li>
+                We give only one trial to the large-size model, considering the time and cost.
+              </li>
+              <li>
+                We place our focus on the medium-size models. According to the loss plot, we
+                can see that 2 epochs is enough. From these finetuning processes, we get different
+                examples of models, which could be deployed later.
+              </li>
+            </ul>
     <br>
     <hr>
 
