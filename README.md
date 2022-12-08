@@ -43,11 +43,11 @@ https://huggingface.co/microsoft/DialoGPT-medium?text=Hey+my+name+is+Mariama%21+
 
 ## Demos
 See screen recordings in the 'demos' folder.
-<br /> 
+<br /><br /> 
 
 ## External Links:
 * Huggingface: https://huggingface.co/Kiana648/movie_dialogue_gpt2
-<br /> <br /> 
+<br />
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
