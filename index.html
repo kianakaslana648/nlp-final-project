@@ -133,10 +133,10 @@
     <h4 style='font-family: "Times New Roman", Times, serif;'>
       <strong>DataSet</strong>
     </h4>
-        <p>
-            <strong>Dataset overview:</strong>
-        </p>
         <br>
+           <p>
+              <strong>Dataset overview:</strong>
+          </p>
      
             <div class="row py-5">
               <div class="col-md-12">
@@ -165,11 +165,10 @@
                 in total 304,713 utterances
               </li>
             </ul>
-    <br>
-    <hr>
-    <h4 style='font-family: "Times New Roman", Times, serif;'>
-      <strong>Data Cleaning</strong>
-    </h4>
+  
+            <p>
+              <strong>Data Cleaning</strong>
+            </p>
             <p>
                 First, we joined the csv files and got all the conversations in movies tagged by ‘comedy’.
             </P>
@@ -187,6 +186,31 @@
     
     <br>
     <hr>
+  
+  
+    <h4 style='font-family: "Times New Roman", Times, serif;'>
+      <strong>Data Cleaning</strong>
+    </h4>
+  
+            <p>
+                First, we joined the csv files and got all the conversations in movies tagged by ‘comedy’.
+            </P>
+            <p>
+                Since we trained the models using movie dialogues data, 
+                there are too many repeated sentences like ‘Yes’, ‘No’, ‘I don’t know’, ‘I’m sorry’ in our training data sets. 
+                To avoid the situation the chatbot respond too many such words to users instead of humorous responses, 
+                we removed these superfluous words from our training dataset. 
+            </P>
+            <p>
+                In experiments of interacting with this chatbot, we found that it tends to give very short response. 
+                Since the business goal of this chatbot is to help users to pass the time away and gives users entertainment, 
+                such short conversations are not wanted by users. Therefore, we filtered out all sentences with length under 10.
+            </P>
+    
+    <br>
+    <hr>
+
+
     <h4 style='font-family: "Times New Roman", Times, serif;'>
       <strong>Deploy</strong>
     </h4>
