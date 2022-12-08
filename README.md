@@ -2,12 +2,12 @@
 Team Member: Jieqian Liu(jl2750), Jieyi Sun(js4958), Zidong Xu(zx92), Minglei Cai(mc2582)
 
 Report Website: https://kianakaslana648.github.io/nlp-final-project/#
-<br /> 
+<br /> <br /> 
 
 
 ## Project Goals
 For our project, we place our interests and efforts on the open-domain chatbots. We expect to build an open-domain chatbot with dramatic responses, which has the ability of 'chatting' with the user in an interesting and interactive way. Our business goal is to give the user a surprise, a sense of happiness, and a relief temporarily from the heavy everyday work and studies. Our basic idea is finetune the pre-trained **microsoft dialoGPT** dialogue systems on the movie dialogue corpus and deploy the chatbots using the API provided by **google voice**.
-<br />
+<br /> <br /> 
 
 
 ## Datasets
