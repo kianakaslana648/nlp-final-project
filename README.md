@@ -10,14 +10,11 @@ For our project, we place our interests and efforts on the open-domain chatbots.
 ### Movie Dialogue Corpus:
 https://www.kaggle.com/datasets/Cornell-University/movie-dialog-corpus
 
-The corpus contains a metadata-rich collection of fictional conversations extracted from raw movie scripts:
+The Movie Dialogue Corpus contains a metadata-rich collection of fictional conversations extracted from raw movie scripts. This dataset only includes movies that had more than 5 IMDB (The Internet Movie Database; data interfaces available at http://www.imdb.com/interfaces) votes, which includes 220,579 conversational exchanges between 10,292 pairs of movie characters, 9,035 characters from 617 movies, and a totally of 304,713 utterances.
 
-* 220,579 conversational exchanges between 10,292 pairs of movie characters
-* involves 9,035 characters from 617 movies
-* in total 304,713 utterances
 
 ## Pre-trained Models
-Seq2seq transformers from huggingface community:  
+DialoGPT from microsoft, Model link from huggingface: https://huggingface.co/microsoft/DialoGPT-medium?text=Hey+my+name+is+Julien%21+How+are+you%3F 
 * DialoGPT-small; DialoGPT-medium; DialoGPT-large.
 
 ## Tutorial
