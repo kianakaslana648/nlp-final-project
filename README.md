@@ -15,7 +15,7 @@ For our project, we place our interests and efforts on the open-domain chatbots.
 https://www.kaggle.com/datasets/Cornell-University/movie-dialog-corpus
 
 The Movie Dialogue Corpus contains a metadata-rich collection of fictional conversations extracted from raw movie scripts. This dataset only includes movies that had more than 5 IMDB (The Internet Movie Database; data interfaces available at http://www.imdb.com/interfaces) votes, which includes 220,579 conversational exchanges between 10,292 pairs of movie characters, 9,035 characters from 617 movies, and a totally of 304,713 utterances.
-<br /> 
+<br /> <br /> 
 
 
 ## Pre-trained Models
