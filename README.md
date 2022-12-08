@@ -17,9 +17,7 @@ The Movie Dialogue Corpus contains a metadata-rich collection of fictional conve
 DialoGPT from microsoft
 * DialoGPT-small; DialoGPT-medium; DialoGPT-large.
 
-
-
-
+&nbsp;&nbsp;
 
 ## Tutorial
 
