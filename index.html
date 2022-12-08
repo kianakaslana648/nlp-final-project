@@ -147,9 +147,8 @@
               </div>
              </div>
   
-            <p><strong>Movie Dialogue Corpus</strong></p>
             <p>
-              The corpus contains a metadata-rich collection of fictional conversations extracted from raw movie scripts:
+              The <a href="https://www.kaggle.com/datasets/Cornell-University/movie-dialog-corpus"><strong>Movie Dialogue Corpus</strong></a> contains a metadata-rich collection of fictional conversations extracted from raw movie scripts:
             </p>
             <p>
               <a href="https://www.kaggle.com/datasets/Cornell-University/movie-dialog-corpus">movie-dialog-corpus-kaggle-link</a>
@@ -185,30 +184,7 @@
     
     <br>
     <hr>
-  
-  
-    <h4 style='font-family: "Times New Roman", Times, serif;'>
-      <strong>Data Cleaning</strong>
-    </h4>
-  
-            <p>
-                First, we joined the csv files and got all the conversations in movies tagged by ‘comedy’.
-            </P>
-            <p>
-                Since we trained the models using movie dialogues data, 
-                there are too many repeated sentences like ‘Yes’, ‘No’, ‘I don’t know’, ‘I’m sorry’ in our training data sets. 
-                To avoid the situation the chatbot respond too many such words to users instead of humorous responses, 
-                we removed these superfluous words from our training dataset. 
-            </P>
-            <p>
-                In experiments of interacting with this chatbot, we found that it tends to give very short response. 
-                Since the business goal of this chatbot is to help users to pass the time away and gives users entertainment, 
-                such short conversations are not wanted by users. Therefore, we filtered out all sentences with length under 10.
-            </P>
-    
-    <br>
-    <hr>
-
+ 
 
     <h4 style='font-family: "Times New Roman", Times, serif;'>
       <strong>Deploy</strong>
