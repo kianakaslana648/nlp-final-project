@@ -16,6 +16,7 @@ The Movie Dialogue Corpus contains a metadata-rich collection of fictional conve
 ## Pre-trained Models
 DialoGPT from microsoft, Model link from huggingface: 
 https://huggingface.co/microsoft/DialoGPT-medium?text=Hey+my+name+is+Julien%21+How+are+you%3F 
+
 DialoGPT-small; DialoGPT-medium; DialoGPT-large.
 The DialoGPT was released by Microsoft and trained with 147M multi-turn dialogues extracted from Reddit discussion threads. It has strong flexibility and robustness. According to the human evaluation results, the response generated from DialoGPT is comparable to human response quality under a single-turn conversation Turing test.
 
