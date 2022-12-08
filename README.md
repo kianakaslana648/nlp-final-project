@@ -47,7 +47,7 @@ See screen recordings in the 'demos' folder.
 
 ## External Links:
 * Huggingface: https://huggingface.co/Kiana648/movie_dialogue_gpt2
-<br /> 
+<br /> <br /> 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
