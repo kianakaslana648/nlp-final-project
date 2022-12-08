@@ -143,14 +143,18 @@
             <br>
             <ul>
               <li>
-                Join the csv files and get all the conversations in movies tagged by 'comedy'.
+                First, we joined the csv files and got all the conversations in movies tagged by ‘comedy’.
               </li>
               <li>
-                Filter out meanless sentences such as 'Yes.', 'No.', 'I don't know', 'I'm sorry',
-                which take a large part of original dataset and can lead to unwanted fintuning results.
+                Since we trained the models using movie dialogues data, 
+                there are too many repeated sentences like ‘Yes’, ‘No’, ‘I don’t know’, ‘I’m sorry’ in our training data sets. 
+                To avoid the situation the chatbot respond too many such words to users instead of humorous responses, 
+                we removed these superfluous words from our training dataset. 
               </li>
               <li>
-                Filter out all sentences with length under 10, which are low-quality conversations.
+                In experiments of interacting with this chatbot, we found that it tends to give very short response. 
+                Since the business goal of this chatbot is to help users to pass the time away and gives users entertainment, 
+                such short conversations are not wanted by users. Therefore, we filtered out all sentences with length under 10.
               </li>
             </ul>
         <br>
@@ -165,13 +169,14 @@
             </p>
             <ul>
               <li>
-                Colab Pro+ & extra 300 compute units($50 per month + extra $30)(500+300 compute units)
+                To adjust the chatbot precisely so as to bring to the highest level of performance and effective, 
+                the hardware support we chose for training is Colab Pro+ with 800 compute units which cost us $530 per month. 
               </li>
               <li>
-                Google One ($2 per month)(100 GB storage)
+                To ensure that we have enough cloud storage, we used Google One with 100 GB storage which cost us $2 per month.  
               </li>
               <li>
-                Intel i7-10750H (RAM 16GB)
+                We used benchmarks of Intel Core i7-10750H with RAM 16GB which is one of the fastest laptop processors on the market. 
               </li>
             </ul>
             <br>
@@ -180,13 +185,12 @@
             </p>
             <ul>
               <li>
-                DialoGPT-small: Around 35min
+                DialoGPT is a SOTA large-scale pretrained dialogue response generation model for nultiturn conversations. 
+                In the human evaluation, we have used three DialoGPT with different size and compare the time of response generated from DialoGPT. 
               </li>
               <li>
-                DialoGPT-medium: Around 1h 20min
-              </li>
-              <li>
-                DialoGPT-large: Around 2h 15min
+                We waited around 35 minutes for DialoGPT-small (0.5 GB) to respond, 
+                80 minutes for DialoGPT-medium (1.4 GB) to respond, 135 minutes for DialoGPT-large (2.9 GB) to respond.
               </li>
             </ul>
             <br>
@@ -229,7 +233,11 @@
         </div>
       </div>
     </div>
-    <p>Well, while this is our chatbot of the 'first generation', it chats with us as our SweetHeart!</p>
+    <p>Going through a testing phrase before releasing our chat robot is quite important. 
+      We must keep on monitoring results even after going live. 
+      We have performed many experiments using models of different size and training data sets. 
+      Finally, we got a satisfying chatbot whose name is SweetHeart. 
+      SweetHeart was implemented with DialoGPT-medium and the dataset after cleaning.</p>
 
     <br>
     <hr>
@@ -237,10 +245,8 @@
       <strong>More Interactions</strong>
     </h4>
     <br>
-    <p>After we improve our data-cleaning & finetuning process and have
-      more trials for the hyper-parameters, our SweetHeart 
-      becomes more interesting and interactive.
-      And we have more interesting interactions with our SweetHeart:</p>
+    <p>After improving the data-cleaning process and finetuning process and having more trails for the hyper-parameters, 
+      our SweetHeart became more humorous and interactive. Here are more interesting interaction with our SweetHeart.:</p>
 
     <table style="margin:auto;">
       <tr>
