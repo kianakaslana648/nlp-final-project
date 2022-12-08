@@ -94,7 +94,7 @@
       following parts.
     </p>
     <p>
-      Anyway, we simply want to give the user a surprise, a sense of happiness, 
+      Our business goal is to give the user a surprise, a sense of happiness, 
       and a relief temporarily from the heavy everyday work and studies.
     </p>
     <br>
@@ -179,16 +179,32 @@
             <p>
               <strong>Finetuning Time:</strong>(Epochs:2 Batch_size:4)
             </p>
-            <ul>
-              <li>
+            <p>
                 DialoGPT is a SOTA large-scale pretrained dialogue response generation model for nultiturn conversations. 
                 In the human evaluation, we have used three DialoGPT with different size and compare the time of response generated from DialoGPT. 
-              </li>
-              <li>
+              
+            <p>
                 We waited around 35 minutes for DialoGPT-small (0.5 GB) to respond, 
                 80 minutes for DialoGPT-medium (1.4 GB) to respond, 135 minutes for DialoGPT-large (2.9 GB) to respond.
-              </li>
-            </ul>
+            
+           <br>
+    <hr>
+    <h4 style='font-family: "Times New Roman", Times, serif;'>
+      <strong>Data Cleaning</strong>
+    </h4>
+            <br>
+                We used Google Voice API to receive messages, autosave messages to gmail. 
+                Then processed unread messages every 5 seconds, using our models. 
+                Finally sent processed messages through our virtual number (+1 2028884948). 
+                All messages were processed in different sessions which are classified by sender numbers.
+
+            <br>
+                Since there were no extra machines nor rent any servers, 
+                we deployed our models just on Google Colab. 
+                Considering the price of google colab, it is not 24-hour deployed, only running when we want to make interactions with our chatbot.
+
+             
+           
             <br>
             <p>
               <strong>Loss Visualization:</strong>(Screenshots of Tensorboard)
@@ -293,12 +309,12 @@
     </div>
     <br>
     <p>
-      We interact with our SweetHeart using common sentences, philosophical questions, quotes of Darks Souls & 
-      Elden Ring, poems by Load Byron. And in reply our SweetHeart presents us with some surprises!
+      We interacted with our SweetHeart using common sentences, philosophical questions, quotes of Darks Souls & 
+      Elden Ring, poems by Load Byron. And in reply our SweetHeart presented us with some surprises!
     </p>
     <p>
       While original DialoGPT tends to give longer replies as illustrations to the question 
-      'What's the meaning of Life?', our chatbot tends to reply in a short and smart way, which 
+      'What's the meaning of Life?', this chatbot tends to reply in a short and smarter way, which 
       is expected in movie conversations.
     </p>
     <br>
