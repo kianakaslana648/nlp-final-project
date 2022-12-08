@@ -17,9 +17,7 @@ The Movie Dialogue Corpus contains a metadata-rich collection of fictional conve
 DialoGPT from microsoft
 * DialoGPT-small; DialoGPT-medium; DialoGPT-large.
 
-&nbsp;&nbsp;
-
-## Tutorial Part
+## Tutorial
 
 ### Data Cleaning
 * You can follow the tutorial notebook **Movie_DialoGPT_train.ipynb** for the data-cleaning process. Currently we only make use of the subset dialogues of movies tagged with 'comedy'.
