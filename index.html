@@ -170,11 +170,10 @@
               <strong>Data Cleaning</strong>
             </p>
             <p>
-                First, we joined the csv files and got all the conversations in movies tagged by ‘comedy’.
+                First, we joined tables and got all the conversations in movies tagged by ‘comedy’, and then we use Regular expressions to remove unnecessary symbols from the actual text of each utterance we extracted before.
             </P>
             <p>
-                Since we trained the models using movie dialogues data, 
-                there are too many repeated sentences like ‘Yes’, ‘No’, ‘I don’t know’, ‘I’m sorry’ in our training data sets. 
+                What's more, we found that there are too many repeated sentences like ‘Yes’, ‘No’, ‘I don’t know’, ‘I’m sorry’ in our training data sets. 
                 To avoid the situation the chatbot respond too many such words to users instead of humorous responses, 
                 we removed these superfluous words from our training dataset. 
             </P>
